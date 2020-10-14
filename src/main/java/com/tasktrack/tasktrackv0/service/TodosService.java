@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TodosService {
@@ -19,6 +20,10 @@ public class TodosService {
 
     public List<Todos> getAllTodos() {
         return todosRepo.findAll();
+    }
+
+    public Todos getTodosById(Long id) {
+        return todosRepo.findById(id).orElse(null);
     }
 
 
