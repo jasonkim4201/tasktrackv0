@@ -22,6 +22,10 @@ public class Todos {
     @JoinColumn(name = "user_id")
     private Users user;
 
+    public Todos() {
+
+    }
+
     public Todos(Long id, String title, String description, boolean isCompleted, Users user) {
         this.id = id;
         this.title = title;

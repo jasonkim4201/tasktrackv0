@@ -21,6 +21,10 @@ public class Users {
     @Column(nullable = false)
     private String password;
 
+    public Users() {
+        
+    }
+
     public Users(Long id, String firstName, String lastName, String username, String password) {
         this.id = id;
         this.firstName = firstName;
